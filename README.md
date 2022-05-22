@@ -1,2 +1,2 @@
 # basemaker5.github.io
-Minecraft-related portfolio
+This repo contains source code for the website containing the Minecraft-related portfolio.
