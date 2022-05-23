@@ -10,7 +10,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.navbar {
+/* Desktop navbar */
+.desktop-navbar {
     position: fixed;
     background-color: #457b9d;
     text-align: center;
@@ -20,7 +21,7 @@ body {
     display: grid;
     grid-template-columns: auto auto;
 }
-.navbar .navbar-title {
+.desktop-navbar .desktop-navbar-title {
     font-size: 24px;
     color: #f1faee;
     display: flex;
@@ -28,16 +29,16 @@ body {
     justify-content: left;
     padding-left: 50px;
 }
-.navbar ul {
+.desktop-navbar ul {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-right: 40px;
 }
-.navbar ul li {
+.desktop-navbar ul li {
     list-style: none;
 }
-.navbar ul li a {
+.desktop-navbar ul li a {
     /* Text formatting */
     text-align: center;
     font-size: 18px;
@@ -51,15 +52,18 @@ body {
     /* Used for hover effects */
     transition: 0.3s;
 }
-.navbar ul li a:hover {
+.desktop-navbar ul li a:hover {
     color: #1d3557;
     background-color: #a8dadc;
     transition: 0.3s;
 }
-.navbar-buffer {
+.desktop-navbar-buffer {
     height: 55px;
 }
 
+/* Mobile navbar */
+
+/* Banner image and text */
 .banner {
     position: relative;
     width: 100%;
@@ -71,6 +75,7 @@ body {
     /* Text formatting */
     color: #f1faee;
     text-align: center;
+    font-size: 1.5vw;
     /* Positional formatting */
     position: absolute;
     top: 50%;
@@ -78,9 +83,20 @@ body {
     transform: translate(-50%, -50%);
 }
 
+/* Main content */
 .main-content {
     margin: 5px;
 }
 .main-content p {
     font-size: large;
+}
+
+/* Switches between desktop and mobile navbars based on screen size */
+@media screen and (max-width: 481px) {
+    .desktop-navbar {
+        display: none;
+    }
+    .desktop-navbar-buffer {
+        display: none;
+    }
 }
