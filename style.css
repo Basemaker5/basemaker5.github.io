@@ -75,12 +75,18 @@ body {
     /* Text formatting */
     color: #f1faee;
     text-align: center;
-    font-size: 1.5vw;
+    font-size: max(8px, 1.5vw);
     /* Positional formatting */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
+}
+.banner .banner-text table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Main content */
