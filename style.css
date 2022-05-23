@@ -75,7 +75,7 @@ body {
     /* Text formatting */
     color: #f1faee;
     text-align: center;
-    font-size: max(12px, 1.5vw);
+    font-size: max(8px, 1.5vw);
     /* Positional formatting */
     position: absolute;
     top: 50%;
