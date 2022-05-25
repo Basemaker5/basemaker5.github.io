@@ -22,7 +22,7 @@ body {
     justify-content: space-between;
 }
 .navbar-title {
-    font-size: 24px;
+    font-size: min(5vw, 24px);
     color: #f1faee;
     display: flex;
     align-items: center;
@@ -39,6 +39,14 @@ body {
 }
 .desktop-links li a {
     padding: 0px 10px;
+    transition-property: color, background-color;
+    transition-duration: 0.3s;
+}
+.desktop-links li a:hover {
+    color: #1d3557;
+    background-color: #a8dadc;
+    transition-property: color, background-color;
+    transition-duration: 0.3s;
 }
 .mobile-links {
     display: flex;
@@ -63,13 +71,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Used for hover effects */
-    transition: 0.3s;
-}
-.menu-links li a:hover {
-    color: #1d3557;
-    background-color: #a8dadc;
-    transition: 0.3s;
 }
 .navbar-buffer {
     height: 55px;
@@ -96,23 +97,20 @@ body {
         color: #f1faee;
         cursor: pointer;
         user-select: none;
+        transition-property: color, background-color;
+        transition-duration: 0.3s;
 
         display: flex;
         align-items: center;
         justify-content: center;
         width: 50px;
         height: 50px;
-        transition: 0.3s;
-    }
-    .mobile-menu-icon:hover {
-        color: #1d3557;
-        background-color: #a8dadc;
-        transition: 0.3s;
     }
     .mobile-menu-icon.open {
         color: #1d3557;
         background-color: #f1faee;
-        transition: 0.3s;
+        transition-property: color, background-color;
+        transition-duration: 0.3s;
     }
     .mobile-menu {
         background-color: #457b9d;
@@ -128,7 +126,6 @@ body {
         background-color: #457b9d;
         display: block;
         position: absolute;
-        top: 55px;
         right: 0vw;
     }
 }
