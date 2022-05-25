@@ -10,17 +10,29 @@
         <title>Test Webpage</title>
     </head>
     <body>
-        <nav class="desktop-navbar">
-            <h1 class="desktop-navbar-title">Brenden Lech</h1>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-            </ul>
-
-        </nav>
-        <div class="desktop-navbar-buffer"></div>
+        <header class="navbar">
+            <h1 class="navbar-title">Brenden Lech</h1>
+            <nav>
+                <ul class="desktop-links menu-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+                <div class="mobile-menu-icon" onclick="toggleMobileMenu(this)">&#x2261
+                    <div class="mobile-menu">
+                        <ul class="mobile-links menu-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="resume.html">Resume</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <script src="mobile-menu.js"></script>
+        </header>
+        <div class="navbar-buffer"></div>
         <div class="banner">
             <img src="assets/banner.jpg" alt="Ghost Leviathan swimming">
             <div class="banner-text">
@@ -32,7 +44,7 @@
                     </tr>
                     <tr>
                         <td style="display: flex; justify-content: center; align-items: center;">
-                            <div style="background-color: #e63946; height: 0.1vw; width: 20vw;"></div>
+                            <div style="background-color: #e63946; height: max(1px, 0.1vw); width: 20vw;"></div>
                         </td>
                     </tr>
                     <tr>
