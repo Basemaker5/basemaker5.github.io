@@ -115,11 +115,11 @@ body {
     .mobile-menu {
         background-color: #457b9d;
         display: block;
-        width: 40vw;
+        width: 60vw;
         height: 100vh;
         position: absolute;
         top: 55px;
-        right: -40vw;
+        right: -60vw;
         transition: right 0.3s;
     }
     .open .mobile-menu {
@@ -138,7 +138,7 @@ body {
 .banner img {
     width: 100%;
 }
-.banner .banner-text {
+.banner-text {
     /* Text formatting */
     color: #f1faee;
     text-align: center;
@@ -148,9 +148,9 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
+    width: 90%;
 }
-.banner .banner-text table {
+.banner-text table {
     display: flex;
     align-items: center;
     justify-content: center;
