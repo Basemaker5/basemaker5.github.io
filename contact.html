@@ -7,7 +7,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
+        <title>Contact</title>
     </head>
     <body>
         <header class="navbar">
@@ -29,38 +29,26 @@
             <script src="mobile-menu.js"></script>
         </header>
         <div class="navbar-buffer"></div>
-        <div class="banner">
-            <img src="assets/banner.jpg" alt="Ghost Leviathan swimming underwater in a cave in Minecraft">
-            <div class="banner-text">
-                <table>
-                    <tr>
-                        <td>
-                            <h1>Minecraft Content Development</h1>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="display: flex; justify-content: center; align-items: center;">
-                            <div style="background-color: #e63946; height: max(1px, 0.1vw); width: 20vw;"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h2>for Java and Bedrock Editions</h2>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
         <div class="main-content">
-            <div class="cards">
-                <div class="card">
-                    <div>
-                        left
-                    </div>
-                    <div>
-                        right
-                    </div>
-                </div>
+            <div class="contact-form-box">
+                <h3>Contact Me</h3>
+                <h4>Want to get in touch? Leave a message here, and I'll get back to you as soon as possible.<br><br></h4>
+                <form id="contact-form" action="https://formspree.io/f/xdobbgnj" method="POST">
+                    <label>
+                        <input class="form-input" placeholder="Enter Email" type="email" name="email">
+                    </label>
+                    <br>
+                    <label>
+                        <textarea placeholder="Enter Message (Required)" class="form-input" name="message" rows="8" required=""></textarea>
+                    </label>
+                    <br>
+                    <button type="submit">Submit</button>
+                    <script>
+                        window.onbeforeunload = () => {
+                            document.getElementById('contact-form').reset();
+                        }
+                    </script>
+                </form>
             </div>
         </div>
     </body>

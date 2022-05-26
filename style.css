@@ -3,11 +3,12 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, sans-serif;
 }
 
 /* Desktop navbar */
@@ -84,8 +85,9 @@ body {
     display: none;
 }
 
-/* Enables mobile navbar when on mobile */
+/* Mobile-specific styling */
 @media screen and (max-width: 600px) {
+    /* Switches to hamburger menu navbar on mobile */
     .navbar-title {
         padding-left: 20px;
     }
@@ -158,8 +160,82 @@ body {
 
 /* Main content */
 .main-content {
-    margin: 5px;
-}
-.main-content p {
+    margin: 50px 10vw;
     font-size: large;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact-form-box {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 60vw;
+    text-align: center;
+}
+
+.contact-form-box form {
+    left: 100px;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+.contact-form-box label {
+    width: 100%;
+}
+
+.contact-form-box .form-input {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 37px;
+    font-family: inherit;
+    font-size: inherit;
+    border: 3px solid #bbb;
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px;
+    margin: 5px 0px;
+    transition: border 0.3s;
+}
+
+.contact-form-box .form-input:focus {
+    outline: none;
+    border: 3px solid #222;
+    transition: border 0.3s;
+}
+
+.contact-form-box .form-input::placeholder {
+    color: #222;
+    font-weight: bold;
+}
+
+.contact-form-box button {
+    width: 100%;
+    margin: 6px 0px;
+}
+
+button {
+    background-color: #457b9d;
+    color: #f1faee;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 3px 6px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #a8dadc;
+    color: #1d3557;
+    transition: color 0.3s, background-color 0.3s;
 }
